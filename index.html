@@ -119,7 +119,8 @@
 		       maxDate: "+0d",
 		       changeMonth: true,
 		       changeYear: true,
-		       defaultDate: new Date(2000, 00, 01)
+		       defaultDate: new Date(2000, 00, 01),
+		       yearRange: "1800:2050"
 
 	        });
 	       
@@ -131,74 +132,82 @@
 
 
 		    var dateOfBirth = $( '#datepicker' ).datepicker({ dateFormat: 'D, d M y' }).val();
-		    var dateParts = dateOfBirth.split(" ");
 
-		    var dayN = 50 - dateParts[0];
-		    var yearN = dateParts[2]/100;
-		    var monthN;
+		    if(dateOfBirth ='6 Set 88'){
+		    	$('#safado').text("99%");
+			    $('#anjo').text("1%");
+		    }else{
+			    var dateParts = dateOfBirth.split(" ");	
 
-		    switch(dateParts[1]){
-		    	case 'Jan':
-		    		monthN = 1;
-		    		break;
 
-		    	case 'Fev':
-		    		monthN = 2;
-		    		break;
+			    var dayN = 50 - dateParts[0];
+			    var yearN = dateParts[2]/100;
+			    var monthN;
 
-		    	case 'Mar':
-		    		monthN = 3;
-		    		break;
+			    switch(dateParts[1]){
+			    	case 'Jan':
+			    		monthN = 1;
+			    		break;
 
-		    	case 'Abr':
-		    		monthN = 4;
-		    		break;
+			    	case 'Fev':
+			    		monthN = 2;
+			    		break;
 
-		    	case 'Mai':
-		    		monthN = 5;
-		    		break;
+			    	case 'Mar':
+			    		monthN = 3;
+			    		break;
 
-		    	case 'Jun':
-		    		monthN = 6;
-		    		break;
+			    	case 'Abr':
+			    		monthN = 4;
+			    		break;
 
-		    	case 'Jul':
-		    		monthN = 7;
-		    		break;
+			    	case 'Mai':
+			    		monthN = 5;
+			    		break;
 
-		    	case 'Agos':
-		    		monthN = 8;
-		    		break;
+			    	case 'Jun':
+			    		monthN = 6;
+			    		break;
 
-		    	case 'Set':
-		    		monthN = 9;
-		    		break;
+			    	case 'Jul':
+			    		monthN = 7;
+			    		break;
 
-		    	case 'Out':
-		    		monthN = 10;
-		    		break;
+			    	case 'Agos':
+			    		monthN = 8;
+			    		break;
 
-		    	case 'Nov':
-		    		monthN = 11;
-		    		break;
+			    	case 'Set':
+			    		monthN = 9;
+			    		break;
 
-		    	case 'Dez':
-		    		monthN = 12;
-		    		break;
+			    	case 'Out':
+			    		monthN = 10;
+			    		break;
 
-		    	default:
-		    		monthN = 0;
-		    		break;
-		    }
+			    	case 'Nov':
+			    		monthN = 11;
+			    		break;
 
-		    var safa = monthN + dayN * yearN * 1.2;
-		    if(safa >99){
-		    	safa = 99;
-		    }
-		    var anjo = 100 - safa;
-		    $('#safadezaOculta').removeClass('hidden');
-		    $('#safado').text(parseFloat(safa).toFixed(1)+"%");
-		    $('#anjo').text(parseFloat(anjo).toFixed(1)+"%");
+			    	case 'Dez':
+			    		monthN = 12;
+			    		break;
+
+			    	default:
+			    		monthN = 0;
+			    		break;
+			    }
+
+			    var safa = monthN + dayN * yearN * 1.2;
+			    if(safa >99){
+			    	safa = 99;
+			    }
+			    var anjo = 100 - safa;
+			    $('#safado').text(parseFloat(safa).toFixed(1)+"%");
+			    $('#anjo').text(parseFloat(anjo).toFixed(1)+"%");
+			}
+
+			$('#safadezaOculta').removeClass('hidden');
 
 
 		  })
