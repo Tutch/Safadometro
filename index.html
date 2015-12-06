@@ -56,6 +56,26 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '216182242046082',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	
 	<div id="wrapper">
 		<img id="safadao" src="img/safagod.png" alt="Smiley face">
 		<section class="section group safadeza">
@@ -71,10 +91,14 @@
 					<input type="button" id="safabutton" class="inactiveButton" value="Calcular safadeza">
 					</form>
 					<span id="safadezaOculta" class="hidden">Você é <span id="safado"></span> safado <br class="hiddenBreak">e <span id="anjo"></span> anjo!</span>
+					<!-- Your share button code -->
+	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-width="200" data-type="button_count"></div>
+
 					<div id="disclaimer" class="disclaimer">
 						Essa página é apenas uma sátira. Wesley Safadão (infelizmente) não tem nada a ver com isso.<br>
 						Por favor, não me processe. Força do Ciroc para todos!
 					</div>
+
 				</div>
 				
 			</div>
