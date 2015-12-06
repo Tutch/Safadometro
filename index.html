@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+	<!-- This website was built using Responsive Grid System by Graham Robert Sonmiller: http://www.responsivegridsystem.com/ -->
+	<meta charset="utf-8">
+	<html lang="pt-BR">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Safadômetro</title>
+	<meta name="keywords" content="safadao, anjo, safado, medidor">
+	<meta name="author" content="">
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic' rel='stylesheet' type='text/css'>	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="responsivegridsystem/css/html5reset.css" media="all">
+	<link rel="stylesheet" href="css/responsivegridsystem.css" media="all">
+	<link rel="stylesheet" href="responsivegridsystem/css/12cols.css" media="all">
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+
+	<!-- Responsive Stylesheets -->
+	<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="responsivegridsystem/css/1024.css">
+	<link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="responsivegridsystem/css/768.css">
+	<link rel="stylesheet" media="only screen and (max-width: 480px)" href="responsivegridsystem/css/480.css">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<img id="safadao" src="img/safagod.png" alt="Smiley face">
+		<section class="section group safadeza">
+			<div class="col span_12_of_12 container">
+				<div id="safabloco">
+					<span class="title">O quão safadão é você?</span><br>
+					<span class="subtitle">Descubra seu nível de safadeza a partir da data do seu aniversário</span>
+					
+					<form action="teste.php" method="get">
+						<div id="safanascimento">
+							<p>Data do seu nascimento safado: <br><input type="text" id="datepicker"></p>
+						</div>
+					<input type="submit" id="safabutton" class="inactiveButton" value="Calcular safadeza">
+					</form>
+					<div id="disclaimer" class="disclaimer">
+						Essa página é apenas uma sátira. Wesley Safadão (infelizmente) não tem nada a ver com isso.<br>
+						Por favor, não me processe. Força do Ciroc para todos!
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	</div>
+
+	
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script>window.jQuery || document.write('<script src="responsivegridsystem/js/jquery-1.11.3.min.js"><\/script>')</script>
+
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="responsivegridsystem/js/selectivizr-min.js"></script>
+	<![endif]-->
+
+	<!-- More Scripts-->
+	<script src="./responsivegridsystem/js/responsivegridsystem.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+
+	<script>
+	    $(document).ready(function() {
+	    	$('#safabutton').prop('disabled', true);
+
+
+
+	        $( "#datepicker" ).datepicker({
+	        	onSelect: function(date) {
+		            $('#safabutton').prop('disabled', false);
+		            $('#safabutton').addClass('activeButton');
+		        },
+	        	monthNames: [ "Janeiro", "Fevereiro", "Março", "April", "Maio", "Julho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ] ,
+	        	monthNamesShort: [ "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Agos", "Set", "Out", "Nov", "Dez" ] ,
+	            dateFormat: 'D, d M y' ,
+		        dayNames: [ "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo" ] ,
+		       dayNamesMin: [ "Seg", "Ter", "Quar", "Quin", "Sex", "Sáb", "Dom" ] ,
+		       dayNamesShort: [ "Seg", "Ter", "Quar", "Quin", "Sex", "Sáb", "Dom" ] ,
+		       maxDate: "+0d",
+		       changeMonth: true,
+		       changeYear: true,
+		       defaultDate: new Date(2000, 00, 01)
+
+	        });
+	       
+
+	    });
+
+	    
+
+	</script>
+
+
+</body>
+</html>
