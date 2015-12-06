@@ -1,5 +1,4 @@
 	//BOO! Um código feioso!
-		var value;
 	    $(document).ready(function() {
 	    	$('#safabutton').prop('disabled', true);
 
@@ -42,7 +41,7 @@
 
 			    var dayN = 50 - dateParts[0];
 			    var yearN = dateParts[2]/100;
-			    var monthN;
+			    var monthN = 0;
 
 			    switch(dateParts[1]){
 			    	case 'Jan':
@@ -98,7 +97,13 @@
 			    		break;
 			    }
 
-			    var safa = monthN + (dayN * yearN) * 1.35;
+			    var somaMes = 0;
+
+			    for(i = 0; i < monthN+1; i++){
+					somaMes += i;
+				}
+
+			    var safa = somaMes + (dayN * yearN) * 1.25;
 			    if(safa >99){
 			    	safa = 99;
 			    }
