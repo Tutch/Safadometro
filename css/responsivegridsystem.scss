@@ -1,0 +1,390 @@
+/* RESPONSIVE GRID SYSTEM =============================================================================  */
+
+/* Typography variables*/
+
+$font-base: 24;
+$line-height-base: 24;
+
+$font-title: $font-base * 3.0;
+$font-subtitle: $font-base * 1.0;
+$font-disclaimer: $font-base * 0.6;
+$font-button: $font-base * 1.2;
+
+/*basic spacing unit*/
+$gap_size: 44px;
+
+
+/*Colors*/
+$white: #fefefb;
+$dark_grey: #403e43;
+$light_grey: #898989;
+
+$sobre_background: #f2f2f2;
+$fb_bg: #455799;
+
+
+/*Mixins*/
+
+@mixin font-size( $font-level ) {
+  font-size: unquote( $font-level + 'px' );
+  font-size: unquote( ($font-level / 16) + 'rem' );
+  line-height: $line-height-base / $font-base;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a { font-weight: inherit; }
+
+%title { @include font-size( $font-title ); }
+%subtitle { @include font-size( $font-subtitle ); }
+%disclaimer { @include font-size( $font-disclaimer ); }
+%safabutton { @include font-size( $font-button ); }
+
+
+// Pixel to EM conversion tool http://pxtoem.com/
+h1, .h1, .title { @include font-size( $font-title ); }    
+h2, .h2, .subtitle { @include font-size( $font-subtitle ); }   
+h4, .h4, .disclaimer { @include font-size( $font-disclaimer ); }  
+
+/* BASIC PAGE SETUP ============================================================================= */
+
+body { 
+margin : 0 auto;
+padding : 0;
+height:100%;
+background: #B22323;
+font-family: 'Open Sans', sans-serif;
+color : #fff; 
+text-align: center;
+}
+
+button, 
+input, 
+select, 
+textarea { 
+color : #333; }
+
+/*  TYPOGRAPHY  ============================================================================= */
+
+p, ol, ul, dl, address { 
+margin-bottom : 1.5em; 
+}
+
+p {
+hyphens : auto;  }
+
+
+
+ul, 
+ol { 
+margin : 0 0 1.5em 0; 
+padding : 0 0 0 0px; }
+
+li ul, 
+li ol { 
+margin : 0;
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+dl, 
+dd { 
+margin-bottom : 1.5em; }
+
+dt { 
+font-weight : normal; }
+
+b, strong { 
+font-weight : bold; }
+
+hr { 
+display : block; 
+margin : 1em 0; 
+padding : 0;
+height : 1px; 
+border : 0; 
+border-top : 1px solid #ccc;
+}
+
+small { 
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+sub, sup { 
+position : relative; 
+vertical-align : baseline; }
+
+sup { 
+top : -.5em; }
+
+sub { 
+bottom : -.25em; }
+
+.subtext {
+	color: #666;
+	}
+
+
+/* IMAGES ============================================================================= */
+
+img {
+border : 0;
+max-width: 100%;
+height: auto;
+width: auto\9; /* ie8 */
+}
+
+img.floatleft { float: left; margin: 0 10px 0 0; }
+img.floatright { float: right; margin: 0 0 0 10px; }
+
+/*  MAIN LAYOUT	============================================================================= */
+	#wrapper {
+		height:100%;
+		width: 100%;
+		position: relative;
+		min-height:860px;
+	}
+
+
+	.safadeza{
+		height: 100%;
+	}
+
+	#safadao{
+		position:absolute;
+		left:10%;
+		bottom:0;
+		width: 34%;
+		height: auto;
+
+		@media (max-width: 1100px){
+			display: none;
+		}
+
+		@media (max-width: 1450px){
+			left: 2% !important;
+			width: 40% !important;
+		}
+	}
+
+	.safacontainer{
+		@media (max-width: 720px){
+			display: none;
+		}
+	}
+
+	.container{
+		position: absolute;
+		left: 40%;
+		top: 10%;
+		overflow: hidden;
+		width: 50% !important;
+		margin: 0 auto;
+
+		@media (max-width: 1100px){
+			left: 0% !important;
+			width: 100% !important; 
+		}
+	}
+
+	
+	
+
+	.title{
+		@include font-size($font-title);
+		font-weight: 700;
+		display: inline-block;
+	}
+
+	.subtitle{
+		@include font-size($font-subtitle);
+		font-weight: 300;
+		margin-top: 22px;
+		display: inline-block;
+	}
+
+	#safabloco{
+		margin-top: 12%;
+		min-height: 600px;
+	}
+
+	#safanascimento{
+		font-size: 24px;
+		font-weight: 600;
+		margin-top: 8%;
+	}
+
+//@include font-size($font-button);
+//		background: #b9b9b9;
+//		color: #363636;
+
+	#safabutton{
+		position: relative;
+		color: #6d6d6d;
+	  top: 0px;
+	  text-decoration: none;
+	  font-size: 25px;
+	  
+	  padding: 15px 50px;
+	  margin: 0 10px;
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;
+
+	  -webkit-transition: All 250ms ease;
+	  -moz-transition: All 250ms ease;
+	  -o-transition: All 250ms ease;
+	  -ms-transition: All 250ms ease;
+	  transition: All 250ms ease;
+
+	  border: none;
+	  outline: none;
+	}
+
+	
+
+	#safabutton:active{
+		position: relative;
+ 	 	top: 5px;
+	  -webkit-box-shadow: none !important;
+	  -moz-box-shadow: none !important;
+	  -ms-box-shadow: none !important;
+	  -o-box-shadow: none !important;
+	  box-shadow: none !important;
+	  -webkit-transition: All 250ms ease;
+	  -moz-transition: All 250ms ease;
+	  -o-transition: All 250ms ease;
+	  -ms-transition: All 250ms ease;
+	  transition: All 250ms ease;
+	}
+
+	.inactiveButton{
+		background: #a5a5a5;
+		 -webkit-box-shadow: 0px 5px 0px #858585;
+	  -moz-box-shadow: 0px 5px 0px #858585;
+	  -ms-box-shadow: 0px 5px 0px #858585;
+	  -o-box-shadow: 0px 5px 0px #858585;
+	  box-shadow: 0px 5px 0px #858585;
+	}
+
+	.activeButton{
+		background: #efefef !important;
+		-webkit-box-shadow: 0px 5px 0px #cccccc !important;
+	  -moz-box-shadow: 0px 5px 0px #cccccc !important;
+	  -ms-box-shadow: 0px 5px 0px #cccccc !important;
+	  -o-box-shadow: 0px 5px 0px #cccccc !important;
+	  box-shadow: 0px 5px 0px #cccccc !important;
+	}
+
+
+	#datepicker{
+		width: 400px;
+		margin-top: 12px;
+		font-size: 28px;
+		text-align:center;
+	}
+
+	#disclaimer{
+		display:block;
+		color: #0a0a0a;
+		line-height: 20px;
+		font-style: italic;
+		font-weight: 400;
+		margin-top: 20%;	}
+
+
+		header {
+			clear: both;
+			margin: 0 auto;
+			padding: 0px 0px 0px 0px;
+			position: relative;
+		}
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/*  GLOBAL OBJECTS ============================================================================= */
+
+.breaker { clear: both; }
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* VENDOR-SPECIFIC ============================================================================= */
+
+html { 
+position:relative;
+height:100%;
+-webkit-overflow-scrolling : touch; 
+-webkit-tap-highlight-color : rgb(52,158,219); 
+-webkit-text-size-adjust : 100%; 
+-ms-text-size-adjust : 100%; }
+
+.clearfix { 
+zoom : 1; }
+
+::-webkit-selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::-moz-selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+-webkit-appearance : button; }
+
+::-webkit-input-placeholder {
+font-size : .875em; 
+line-height : 1.4; }
+
+input:-moz-placeholder { 
+font-size : .875em; 
+line-height : 1.4; }
+
+.ie7 img,
+.iem7 img { 
+-ms-interpolation-mode : bicubic; }
+
+input[type="checkbox"], 
+input[type="radio"] { 
+box-sizing : border-box; }
+
+input[type="search"] { 
+-webkit-box-sizing : content-box;
+-moz-box-sizing : content-box; }
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+padding : 0;
+border : 0; }
+
+p {
+/* http://www.w3.org/TR/css3-text/#hyphenation */
+-webkit-hyphens : auto;
+-webkit-hyphenate-character : "\2010";
+-webkit-hyphenate-limit-after : 1;
+-webkit-hyphenate-limit-before : 3;
+-moz-hyphens : auto; }
