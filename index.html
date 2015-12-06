@@ -63,11 +63,11 @@
 					<span class="title">O quão safadão é você?</span><br>
 					<span class="subtitle">Descubra seu nível de safadeza a partir da data do seu aniversário</span>
 					
-					<form id="safaform" action="" method="get">
+					<form id="safaform">
 						<div id="safanascimento">
 							<p>Data do seu nascimento safado: <br><input type="text" id="datepicker"></p>
 						</div>
-					<input type="submit" id="safabutton" class="inactiveButton" value="Calcular safadeza">
+					<input type="button" id="safabutton" class="inactiveButton" value="Calcular safadeza">
 					</form>
 					<span id="safadezaOculta" class="hidden">Você é <span id="safado"></span> safado e <span id="anjo"></span> anjo!</span>
 					<div id="disclaimer" class="disclaimer">
@@ -126,7 +126,7 @@
 	    });
 
 	  $(document).ready(function() {
-		  $("#safaform").submit(function() {
+		  $("#safabutton").click(function() {
 
 
 		    var dateOfBirth = $( '#datepicker' ).datepicker({ dateFormat: 'D, d M y' }).val();
