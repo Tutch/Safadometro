@@ -1,3 +1,4 @@
+//CSS bagunçadissimo, ajeitarei em breve
 /* RESPONSIVE GRID SYSTEM =============================================================================  */
 
 /* Typography variables*/
@@ -159,6 +160,18 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 			color: #000;
 			weight: 700;
 		}
+
+		@media (max-width: 720px){
+			margin-top: 15%;
+		}
+	}
+
+	.hiddenBreak{
+		display: none;
+
+		@media (max-width: 720px){
+			display: inline !important;
+		}
 	}
 
 	#safadao{
@@ -196,6 +209,10 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 			left: 0% !important;
 			width: 100% !important; 
 		}
+
+		@media (max-width: 720px){
+			top: 0%;
+		}
 	}
 
 	
@@ -212,6 +229,10 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 		font-weight: 300;
 		margin-top: 22px;
 		display: inline-block;
+		
+		@media (max-width: 720px){
+			margin-top: 40px;
+		}
 	}
 
 	#safabloco{
@@ -223,6 +244,10 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 		font-size: 24px;
 		font-weight: 600;
 		margin-top: 8%;
+
+		@media (max-width: 720px){
+			margin-top: 14%;
+		}
 	}
 
 //@include font-size($font-button);
@@ -301,7 +326,13 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 		line-height: 20px;
 		font-style: italic;
 		font-weight: 400;
-		margin-top: 10%;	}
+		margin-top: 10%;
+		padding-bottom: 40px;	
+
+		@media (max-width: 720px){
+			margin-top: 22%;
+		}
+	}
 
 
 		header {

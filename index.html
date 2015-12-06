@@ -65,11 +65,11 @@
 					
 					<form id="safaform">
 						<div id="safanascimento">
-							<p>Data do seu nascimento safado: <br><input type="text" id="datepicker"></p>
+							<p>Data do seu nascimento safado: <br><input type="text" id="datepicker" readonly="readonly"></p>
 						</div>
 					<input type="button" id="safabutton" class="inactiveButton" value="Calcular safadeza">
 					</form>
-					<span id="safadezaOculta" class="hidden">Você é <span id="safado"></span> safado e <span id="anjo"></span> anjo!</span>
+					<span id="safadezaOculta" class="hidden">Você é <span id="safado"></span> safado <br class="hiddenBreak">e <span id="anjo"></span> anjo!</span>
 					<div id="disclaimer" class="disclaimer">
 						Essa página é apenas uma sátira. Wesley Safadão (infelizmente) não tem nada a ver com isso.<br>
 						Por favor, não me processe. Força do Ciroc para todos!
@@ -97,6 +97,7 @@
 	<script src="jquery-ui/jquery-ui.min.js"></script>
 
 	<script>
+	//BOO! Um código feioso!
 		var value;
 	    $(document).ready(function() {
 	    	$('#safabutton').prop('disabled', true);

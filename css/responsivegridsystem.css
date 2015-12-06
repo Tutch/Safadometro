@@ -127,6 +127,15 @@ img.floatright {
   #safadezaOculta span {
     color: #000;
     weight: 700; }
+  @media (max-width: 720px) {
+    #safadezaOculta {
+      margin-top: 15%; } }
+
+.hiddenBreak {
+  display: none; }
+  @media (max-width: 720px) {
+    .hiddenBreak {
+      display: inline !important; } }
 
 #safadao {
   position: absolute;
@@ -157,6 +166,9 @@ img.floatright {
     .container {
       left: 0% !important;
       width: 100% !important; } }
+  @media (max-width: 720px) {
+    .container {
+      top: 0%; } }
 
 .title {
   font-size: 72px;
@@ -172,6 +184,9 @@ img.floatright {
   font-weight: 300;
   margin-top: 22px;
   display: inline-block; }
+  @media (max-width: 720px) {
+    .subtitle {
+      margin-top: 40px; } }
 
 #safabloco {
   margin-top: 12%;
@@ -181,6 +196,9 @@ img.floatright {
   font-size: 24px;
   font-weight: 600;
   margin-top: 8%; }
+  @media (max-width: 720px) {
+    #safanascimento {
+      margin-top: 14%; } }
 
 #safabutton {
   position: relative;
@@ -243,7 +261,11 @@ img.floatright {
   line-height: 20px;
   font-style: italic;
   font-weight: 400;
-  margin-top: 10%; }
+  margin-top: 10%;
+  padding-bottom: 40px; }
+  @media (max-width: 720px) {
+    #disclaimer {
+      margin-top: 22%; } }
 
 header {
   clear: both;
