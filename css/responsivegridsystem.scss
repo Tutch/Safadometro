@@ -329,7 +329,7 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 		line-height: 20px;
 		font-style: italic;
 		font-weight: 400;
-		margin-top: 7%;
+		margin-top: 4%;
 		padding-bottom: 40px;	
 
 		@media (max-width: 720px){
@@ -338,9 +338,9 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 	}
 
 	.fb-share-button{
-		margin-top: 7%;
+		margin-top: 10%;
 		margin:0 auto;
-		display:;
+		display: block !important;
 
 	}
 
