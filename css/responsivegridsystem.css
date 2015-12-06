@@ -129,6 +129,7 @@ img.floatright {
     weight: 700; }
   @media (max-width: 720px) {
     #safadezaOculta {
+      font-size: 34px;
       margin-top: 15%; } }
 
 .hiddenBreak {
@@ -186,7 +187,8 @@ img.floatright {
   display: inline-block; }
   @media (max-width: 720px) {
     .subtitle {
-      margin-top: 40px; } }
+      margin-top: 40px;
+      font-size: 24px; } }
 
 #safabloco {
   margin-top: 12%;
