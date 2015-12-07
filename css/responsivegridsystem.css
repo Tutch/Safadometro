@@ -138,6 +138,10 @@ img.floatright {
     .hiddenBreak {
       display: inline !important; } }
 
+@media (max-width: 720px) {
+  #fb {
+    display: none; } }
+
 #safadao {
   position: absolute;
   left: 10%;

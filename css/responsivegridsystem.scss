@@ -175,6 +175,12 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 		}
 	}
 
+	#fb{
+		@media (max-width: 720px){
+			display: none;
+		}
+	}
+
 	#safadao{
 		position:absolute;
 		left:10%;
