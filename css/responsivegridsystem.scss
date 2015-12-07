@@ -286,6 +286,38 @@ img.floatright { float: right; margin: 0 0 0 10px; }
 	  outline: none;
 	}
 
+	.playing{
+		background: url(../icon/playingicon.png) top no-repeat;
+	}
+
+	.paused{
+		background: url(../icon/muteicon.png) top no-repeat;
+	}
+
+	#safaudio{
+		z-index: 1;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border: none;
+		outline: none;
+		left:0;
+		margin-top: 10%;
+		margin-left: 15%;
+
+		@media (max-width: 1450px){
+			margin-left: 8%;
+			margin-top: 12%;
+		}
+
+		@media (max-width: 720px){
+			margin: 0;
+			margin-top: 5%;
+			margin-left: 5%;
+		}
+
+	}
+
 	
 
 	#safabutton:active{

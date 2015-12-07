@@ -123,5 +123,12 @@ var EAudio = document.getElementById('1porcento');
 	$(document).ready(function() {
 		$('#safaudio').click(function(){
 			EAudio.muted = !EAudio.muted;
+			if(EAudio.muted){
+				$('#safaudio').addClass('paused');
+				$('#safaudio').removeClass('playing');
+			}else{
+				$('#safaudio').addClass('playing');
+				$('#safaudio').removeClass('paused');
+			}
 		})
 	})
