@@ -117,3 +117,11 @@
 
 		  })
 	})
+
+var EAudio = document.getElementById('1porcento'); 
+
+	$(document).ready(function() {
+		$('#safaudio').click(function(){
+			EAudio.muted = !EAudio.muted;
+		})
+	})
