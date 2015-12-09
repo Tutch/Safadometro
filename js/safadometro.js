@@ -33,8 +33,8 @@
 		    var dateOfBirth = $( '#datepicker' ).datepicker({ dateFormat: 'D, d M y' }).val();
 
 		    if(dateOfBirth =='6 Set 88'){
-		    	$('#safado').text("99%");
-			    $('#anjo').text("1%");
+		    	$('#anjo').text("99%");
+			    $('#safado').text("1%");
 		    }else{
 			    var dateParts = dateOfBirth.split(" ");	
 
